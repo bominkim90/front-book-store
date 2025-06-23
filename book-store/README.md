@@ -18,3 +18,28 @@
 5. model - 모델(타입)
 6. api - api 연동을 위한 fetcher 등
 ```
+
+## 글로벌 스타일
+```
+reset.css // 모든 밸류를 리셋(=0)
+normalize.css // 모든 밸류를 리셋X => 기기간의 차이를 최소
+
+sanitize.css // (현재 플젝에 사용) normalize의 진보된 버전
+npm i sanitize
+index.tsx에 적용 => import "sanitize.css"
+```
+
+## styled component
+```
+npm i styled-components
+css in js
+
+스타일의 캡슐화 (전역 스타일X => 지역 스타일)
+```
+
+## 테마 (theme)
+```
+styled component 이용하여 구현
+src/global.ts에 글로벌 스타일은 theme(테마)에 따라 구현되어야 한다.
+
+```
