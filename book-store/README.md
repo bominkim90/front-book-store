@@ -39,9 +39,16 @@ css in js
 
 ## 테마 (theme)
 ```
+** styled component **
 styled component 안의 <ThemeProvider> 기능 이용하여 구현
 <ThemeProvider theme={객체로전달}></ThemeProvider>
 
 src/global.ts에 글로벌 스타일은 theme(테마)에 따라 구현되어야 한다.
 
+
+** context API **
+  컨텍스트객체 = createContext(초기값) 생성후 
+  <컨텍스트객체.Provider value={상태값}>로 감싸여진 
+  모든 하위 컴포넌트들은 
+  value값을 전역state 처럼 사용 가능
 ```
