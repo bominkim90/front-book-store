@@ -31,3 +31,12 @@ export const dark: Theme = {
     third: "green"
   }
 }
+
+export const getThemeType = (themeName : ThemeName) => {
+  switch (themeName) {
+    case "light":
+      return light;
+    case "dark":
+      return dark;
+  }
+}

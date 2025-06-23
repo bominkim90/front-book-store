@@ -39,7 +39,9 @@ css in js
 
 ## 테마 (theme)
 ```
-styled component 이용하여 구현
+styled component 안의 <ThemeProvider> 기능 이용하여 구현
+<ThemeProvider theme={객체로전달}></ThemeProvider>
+
 src/global.ts에 글로벌 스타일은 theme(테마)에 따라 구현되어야 한다.
 
 ```

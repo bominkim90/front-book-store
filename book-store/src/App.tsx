@@ -3,15 +3,16 @@ import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 import { GlobalStyle } from "./style/global";
 import { ThemeProvider } from "styled-components";
-import { light, dark } from "./style/theme";
+import { ThemeName, getThemeType } from "./style/theme";
 import { useState } from "react";
+import ThemeSwitcher from "./components/header/ThemeSwitcher";
 
 function App() {
-  const [themeName, setThemeName] = useState<"light"|"dark">("light");
-  const [themeType, setThemeType] = useState<typeof light | typeof dark>(light);
+  const [themeName, setThemeName] = useState<ThemeName>("light");
 
   return (
-    <ThemeProvider theme={themeType}>
+    <ThemeProvider theme={getThemeType(themeName)}>
+      <ThemeSwitcher themeName={themeName} setThemeName={setThemeName}/>
       <GlobalStyle themeName={themeName} />
 
       {/* <Layout children={<Home/>} /> */}

@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle<Props>`
   }
 
   * {
-    color: ${ (props) => props.theme.color.text }
+    background-color: ${ props => props.theme.color.background };
+    color: ${ props => props.theme.color.text }
   }
 `
